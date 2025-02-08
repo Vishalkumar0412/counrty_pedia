@@ -3,24 +3,26 @@ import axios from 'axios'
 import React from 'react'
 
 const Contact = () => {
-    const handlleSubmit=async (e)=>{
-        try {
+    // const handlleSubmit=async (e)=>{
+    //     try {
         
-            const formData= Object.fromEntries(e.entries())
-           await axios.post("http://localhost:3001/users",formData)
+    //         const formData= Object.fromEntries(e.entries())
+    //        await axios.post("http://localhost:3001/users",formData)
             
-        } catch (error) {
+    //     } catch (error) {
             
-        }
+    //     }
            
            
-    }
+    // }
     return (
         <div className='text-white flex flex-col items-center m-3'>
             <h1 className='text-3xl font-bold'>Contact Us</h1>
             <div className="flex items-start gap-16 p-4 mx-auto max-w-4xl font-[sans-serif] m-2">
 
-            <form action={handlleSubmit}>
+            <form action="https://formsubmit.co/vishalkumar041200@gmail.com"
+            method="POST"
+            >
                 <input name='username' type='text' placeholder='Name' required
                     className="w-full  py-3 px-4 bg-inherit  text-white text-sm   placeholder:text-gray-600 border border-gray-600" />
                 <input name='email' type='email' placeholder='Email' required
